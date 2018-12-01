@@ -6,12 +6,8 @@ def day1(path):
     file = open(path,"r")
     tot = 0
     for ligne in file:
-        signe = ligne[0]
-        reste = int(ligne[1:])
-        if (signe == "+"):
-            tot += reste
-        else:
-            tot -= reste
+        elem = int(ligne)
+        tot += elem
     return tot
     
 def day1t(path):
@@ -21,12 +17,8 @@ def day1t(path):
     tot = 0
     while 1:
         for ligne in dump:
-            signe = ligne[0]
-            reste = int(ligne[1:])
-            if (signe == "+"):
-                tot += reste
-            else:
-                tot -= reste
+            elem = int(ligne)
+            tot += elem
             if tot in res:
                 return tot
             else:

@@ -1,6 +1,6 @@
 import os
 os.chdir("C:/Users/Arnaud/Documents/4-Autres/Advent/2018")
-
+path = "input/day1"
 
 def day1(path):
     file = open(path,"r")
@@ -26,3 +26,9 @@ def day1t(path):
 
 print(day1("input/day1"))
 print(day1t("input/day1"))
+
+
+def day1ligne(path):
+    return sum([int(i) for i in (open(path, "r").readlines())])
+    
+print(day1ligne(path))
